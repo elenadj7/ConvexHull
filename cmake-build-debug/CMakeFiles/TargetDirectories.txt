@@ -1,0 +1,3 @@
+C:/Users/elena/Desktop/ConvexHull/cmake-build-debug/CMakeFiles/ConvexHull.dir
+C:/Users/elena/Desktop/ConvexHull/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/elena/Desktop/ConvexHull/cmake-build-debug/CMakeFiles/rebuild_cache.dir
