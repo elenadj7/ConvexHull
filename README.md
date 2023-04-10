@@ -1,5 +1,5 @@
 # ConvexHull
-An algorithm for finding the convex hull using the Graham scan with OpenMP optimization.
+An algorithm for finding the convex hull using the Graham scan.
 The convex hull problem involves finding the smallest convex polygon that contains all given points in a 2D plane. The Graham scan algorithm is widely used for this problem and works by sorting the input points by their polar angle with respect to a reference point, and then processing the sorted points in a specific order to determine the convex hull.
 
 # How does the algorithm work? 
@@ -8,6 +8,5 @@ Let's first construct the upper part by starting with adding point A to the hull
 Similarly, we construct the lower part but check if the orientation of the appropriate angle is clockwise. The final convex shell is the union of the upper and lower parts.
 
 # Complexity analysis
-In the construction of the convex hull after sorting, each point can appear in operations only twice. For example, consider the set S1. We go through the points from left to right, encountering each point for the first time when we add it to the hull, and then we continue with the algorithm. We can only return to the same point if we determine that it closes an angle in the opposite direction of clockwise, in which case the operation involved is its removal, so it cannot appear again. The same applies to set S2, so the for loop has a complexity of O(n). On the other hand, the sort function has a complexity of O(n²) and dominates the overall execution time. Therefore, the complexity of the entire algorithm is O(n²).
+In the construction of the convex hull after sorting, each point can appear in operations only twice. For example, consider the set S1. We go through the points from left to right, encountering each point for the first time when we add it to the hull, and then we continue with the algorithm. We can only return to the same point if we determine that it closes an angle in the opposite direction of clockwise, in which case the operation involved is its removal, so it cannot appear again. The same applies to set S2, so the for loop has a complexity of O(n). On the other hand, the sort function has a complexity of O(nlogn) and dominates the overall execution time. Therefore, the complexity of the entire algorithm is O(nlogn).
 
-The OpenMP optimization allows for parallel processing, which can significantly reduce the time complexity of the algorithm. The code is well-documented with comments that provide detailed explanations of the optimization techniques utilized by OpenMP in the algorithm.
